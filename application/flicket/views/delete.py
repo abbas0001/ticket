@@ -187,7 +187,7 @@ def delete_department(department_id=False):
             "You are trying to delete department: %(value)s.",
             value=department.department.upper())
 
-        title = gettext('Delete Department')
+        title = gettext('حذف دپارتمان')
 
         return render_template('flicket_delete.html',
                                form=form,
