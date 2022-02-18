@@ -1,0 +1,40 @@
+{% extends "flicket_base.html" %}
+<!-- extend from base layout -->
+{% block content %}
+    <div class="container">
+
+        <div class="row m-2 p-2 border rounded bg-white">
+            <div class="col">
+                <h1 class="text-center">{{ title }}</h1>
+            </div>
+        </div>
+
+        <div class="row m-2 p-2 border rounded bg-white">
+
+            <form class="form form-inline"
+                  action=""
+                  enctype="multipart/form-data"
+                  method="post"
+                  name="create_ticket">
+                {{ form.hidden_tag() }}
+                <label class="col col-form-label">
+                    {{ _('دپارتمان') }}
+                </label>
+                <div class="col mr-2">
+                    {{ form.department(class="form-control form-control-sm") }}
+                </div>
+                <div class="col">
+                    <input class="btn btn-primary btn-sm" type="submit" value="ویرایش"/>
+                </div>
+                {% if form.department.errors %}
+                    <div class="alert alert-warning small">
+                        {% for error in form.department.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

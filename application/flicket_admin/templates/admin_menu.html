@@ -1,0 +1,31 @@
+<!-- {{ self._TemplateReference__context.name }} -->
+<h1 class="m-2 p-2 border rounded bg-white text-center">{{ _('مدیریت') }}</h1>
+<nav class="navbar navbar-expand navbar-dark bg-dark m-2 rounded">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.index') }}">
+                {{ _('صفحه ی ادمین') }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.config') }}">
+                {{ _('تنظیمات فلیکت') }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.users') }}">
+                {{ _('کاربران') }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.add_user') }}">
+                {{ _('اضافه کردن کاربر') }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.groups') }}">
+                {{ _('گروه ها') }}
+            </a>
+        </li>
+    </ul>
+</nav>
