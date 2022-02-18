@@ -63,7 +63,7 @@ def delete_ticket(ticket_id):
     return render_template('flicket_deletetopic.html',
                            form=form,
                            ticket=ticket,
-                           title='Delete Ticket')
+                           title='حذف تیکت')
 
 
 # delete post
@@ -140,7 +140,7 @@ def delete_category(category_id=False):
         notification = "You are trying to delete category: {} that belongs " \
                        "to department: {}.".format(category.category.upper(), category.department.department.upper())
 
-        title = gettext('Delete Category')
+        title = gettext('حذف کتگوری')
 
         return render_template('flicket_delete.html',
                                form=form,

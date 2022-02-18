@@ -202,7 +202,7 @@ class EditTicketForm(CreateTicketForm):
             self.uploads.choices.append((x[0], uri_label))
 
     uploads = MultiCheckBoxField('Label', coerce=int)
-    submit = SubmitField(lazy_gettext('Edit Ticket'), render_kw=form_class_button, validators=[DataRequired()])
+    submit = SubmitField(lazy_gettext('ویرایش تیکت'), render_kw=form_class_button, validators=[DataRequired()])
 
 
 class ReplyForm(FlaskForm):
@@ -213,15 +213,15 @@ class ReplyForm(FlaskForm):
         self.status.choices = [(s.id, s.status) for s in FlicketStatus.query.filter(FlicketStatus.status != 'Closed')]
         self.priority.choices = [(p.id, p.priority) for p in FlicketPriority.query.all()]
 
-    content = PageDownField(lazy_gettext('Reply'),
+    content = PageDownField(lazy_gettext('پاسخ'),
                             validators=[DataRequired(), Length(min=field_size['content_min_length'],
                                                                max=field_size['content_max_length'])])
     file = FileField(lazy_gettext('Add Files'), validators=[allowed_file_extension], render_kw={'multiple': True})
     status = SelectField(lazy_gettext('Status'), validators=[DataRequired()], coerce=int)
     priority = SelectField(lazy_gettext('Priority'), validators=[DataRequired()], coerce=int)
     hours = DecimalField(lazy_gettext('hours'), default=0)
-    submit = SubmitField(lazy_gettext('reply'), render_kw=form_class_button)
-    submit_close = SubmitField(lazy_gettext('reply and close'), render_kw=form_danger_button)
+    submit = SubmitField(lazy_gettext('پاسخ'), render_kw=form_class_button)
+    submit_close = SubmitField(lazy_gettext('پاسخ و بستن'), render_kw=form_danger_button)
 
 
 class EditReplyForm(ReplyForm):
@@ -271,7 +271,7 @@ class CategoryForm(FlaskForm):
                                                               max=field_size['category_max_length']),
                                        does_category_exist])
     department_id = HiddenField('department_id')
-    submit = SubmitField(lazy_gettext('add category'), render_kw=form_class_button)
+    submit = SubmitField(lazy_gettext('اضافه کردن'), render_kw=form_class_button)
 
 
 class SearchDepartmentCategoryForm(FlaskForm):

@@ -24,7 +24,7 @@
 
                         <div class="row m-0">
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Department') }}</div>
+                                <div class="flicket-tickets-title">{{ _('دپارتمان') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.department.department }}
                                     {%- if change_category %}
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Category') }}</div>
+                                <div class="flicket-tickets-title">{{ _('کتگوری') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.category }}
                                     {%- if change_category %}
@@ -48,11 +48,11 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Status') }}</div>
+                                <div class="flicket-tickets-title">{{ _('وضعیت') }}</div>
                                 <div class="flicket-tickets-content">{{ ticket.current_status.status }}</div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Priority') }}</div>
+                                <div class="flicket-tickets-title">{{ _('اولویت') }}</div>
                                 <div class="flicket-tickets-content
                                 {%- if ticket.current_status.status == 'Closed' -%}
                                     {{ ' ' }}flicket-status-closed

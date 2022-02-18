@@ -29,7 +29,7 @@ def categories(department_id=False):
         flash(gettext('New category {} added.'.format(form.category.data)), category="success")
         return redirect(url_for('flicket_bp.categories', department_id=department_id))
 
-    title = gettext('Categories')
+    title = gettext('کتگوری ها')
 
     return render_template('flicket_categories.html',
                            title=title,
@@ -55,7 +55,7 @@ def category_edit(category_id=False):
 
         form.category.data = category.category
 
-        title = gettext('Edit Category')
+        title = gettext('ویرایش کتگوری')
 
         return render_template('flicket_category_edit.html',
                                title=title,

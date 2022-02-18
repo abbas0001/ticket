@@ -71,7 +71,7 @@ def edit_ticket(ticket_id):
     form.title.data = ticket.title
     form.category.data = ticket.category_id
 
-    title = gettext('Edit Ticket')
+    title = gettext('ویرایش تیکت')
 
     return render_template('flicket_edittopic.html',
                            title=title,
