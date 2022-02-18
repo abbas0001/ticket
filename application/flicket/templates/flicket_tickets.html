@@ -229,7 +229,7 @@
                                         flicket-status-closed{% endif %}">
                             <div class="col-md-1 col-6">
                                 <div class="flicket-tickets-title">
-                                    priority
+                                    اولویت
                                 </div>
                                 <div class="flicket-tickets-content  {%- if t.current_status.status == 'Closed' %}
                                         flicket-status-closed{% endif %}
@@ -245,7 +245,7 @@
                             </div>
                             <div class="col-md-2 col-6">
                                 <div class="flicket-tickets-title">
-                                    {{ _('submitted by') }}
+                                    {{ _('ارسال شده توسط') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ t.user.name }}
@@ -253,7 +253,7 @@
                             </div>
                             <div class="col-md-1 col-6">
                                 <div class="flicket-tickets-title">
-                                    {{ _('created') }}
+                                    {{ _('تاریخ ساخت') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ t.date_added.strftime('%Y-%m-%d') }}
@@ -261,7 +261,7 @@
                             </div>
                             <div class="col-md-1 col-6">
                                 <div class="flicket-tickets-title" title=" {{ _('date of last reply, action, edit ...') }}">
-                                    {{ _('updated') }}
+                                    {{ _('تاریخ بروزرسانی') }}
                                 </div>
                                 <div class="flicket-tickets-content" title=" {{ _('date of last reply, action, edit ...') }}">
                                     {{ t.last_updated.strftime('%Y-%m-%d') }}
@@ -269,7 +269,7 @@
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="flicket-tickets-title">
-                                    {{ _('department / category') }}
+                                    {{ _('دپارتمان / کتگوری') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ t.category.department.department }} / {{ t.category.category }}
@@ -277,7 +277,7 @@
                             </div>
                             <div class="col-md-2 col-6">
                                 <div class="flicket-tickets-title">
-                                    {{ _('status') }}
+                                    {{ _('وضعیت') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ t.current_status.status }}
