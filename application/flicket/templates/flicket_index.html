@@ -1,6 +1,7 @@
 {% extends "flicket_base.html" %}
 <!-- extend from base layout -->
 {% block content %}
+{% if g.user.is_admin %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
     <script src="{{ url_for('flicket_bp.static', filename='js/plotly.min.js') }}"></script>
 
@@ -67,5 +68,5 @@
                 {responsive: true});
         }
     </script>
-
+{% endif %}
 {% endblock %}
