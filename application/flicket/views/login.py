@@ -146,5 +146,5 @@ def password_reset():
         flash(gettext('Password reset. Please check your email for your new password'))
         return redirect(url_for('flicket_bp.login'))
 
-    title = 'Password Reset'
+    title = 'ریست رمز'
     return render_template('flicket_password_reset.html', form=form, title=title)

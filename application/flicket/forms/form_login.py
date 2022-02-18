@@ -92,4 +92,4 @@ class LogInForm(FlaskForm):
 class PasswordResetForm(FlaskForm):
     """ Log in form. """
     email = StringField(lazy_gettext('email'), validators=[DataRequired()])
-    submit = SubmitField(lazy_gettext('reset password'), render_kw=form_class_button)
+    submit = SubmitField(lazy_gettext('ریست'), render_kw=form_class_button)
